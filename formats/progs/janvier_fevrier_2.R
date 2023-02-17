@@ -25,10 +25,16 @@ liste_fichiers_courant <- tibble(
     table == "tra_psy_rpsa" ~ "psy_rpsa",
     TRUE ~ table)) %>% 
   mutate(champ = stringr::str_remove(champ, " ")) %>% 
-  filter(an == '21')
+  filter(an == '22')
 
 lf_in <- liste_fichiers_courant$path_fichier
-lf_out <- lf_in %reall% c('21', '22')
+lf_out <- lf_in %reall% c('22', '23')
+
+dir.create('formats/excel/SSR/2023')
+dir.create('formats/excel/MCO/2023')
+dir.create('formats/excel/PSY/2023')
+dir.create('formats/excel/RSF/2023')
+dir.create('formats/excel/HAD/2023')
 
 file.copy(from = lf_in, to = lf_out)
 
