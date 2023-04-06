@@ -84,3 +84,5 @@ rm(.Random.seed)
 
 save.image("formats/table_r/formats.RData")
 
+jsonlite::write_json(formats, 'formats/json/pmeasyr_formats.json')
+
