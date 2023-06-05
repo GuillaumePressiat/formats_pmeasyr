@@ -90,6 +90,7 @@ readr::write_csv(formats, 'formats/json/pmeasyr_formats.csv', na = "")
 arrow::write_parquet(formats %>% 
                        mutate(longueur = as.integer(longueur),
                               position = as.integer(position),
-                              fin = as.integer(position)), 'formats/json/pmeasyr_formats.parquet')
+                              fin = as.integer(position),
+                              curseur = as.integer(curseur)), 'formats/json/pmeasyr_formats.parquet')
 
 
