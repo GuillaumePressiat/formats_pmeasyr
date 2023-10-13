@@ -4,3 +4,6 @@
 .Ruserdata
 dustbin/
 ._*
+
+# Mac
+.DS_Store
