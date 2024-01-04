@@ -3,7 +3,7 @@
 # table = 'ssrha'
 # champ = 'ssr'
 
-library(dplyr)
+library(dplyr, warn.conflicts = F)
 # SSR
 
 rm(list = ls())
