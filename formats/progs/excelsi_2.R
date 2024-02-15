@@ -87,6 +87,10 @@ save.image("formats/table_r/formats.RData")
 jsonlite::write_json(formats %>% arrange(desc(z)), 'formats/json/pmeasyr_formats.json')
 readr::write_csv(formats, 'formats/json/pmeasyr_formats.csv', na = "")
 
+formats <- bind_rows(formats, formats %>% 
+  filter(table == "rsa_med") %>% 
+  mutate(table == "rsa_medatu"))
+
 arrow::write_parquet(formats %>% 
                        mutate(longueur = as.integer(longueur),
                               position = as.integer(position),
