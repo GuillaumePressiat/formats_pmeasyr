@@ -89,7 +89,7 @@ readr::write_csv(formats, 'formats/json/pmeasyr_formats.csv', na = "")
 
 formats <- bind_rows(formats, formats %>% 
   filter(table == "rsa_med") %>% 
-  mutate(table == "rsa_medatu"))
+  mutate(table = "rsa_medatu"))
 
 arrow::write_parquet(formats %>% 
                        mutate(longueur = as.integer(longueur),
