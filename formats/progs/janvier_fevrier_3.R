@@ -2,7 +2,7 @@
 library(dplyr, warn.conflicts = FALSE)
 library(stringfix)
 
-annee = 2024
+annee = 2025
 
 liste_fichiers_courant <- tibble(
   path_fichier = list.files('formats/excel', recursive = TRUE, pattern = "xlsx", full.names = TRUE),
