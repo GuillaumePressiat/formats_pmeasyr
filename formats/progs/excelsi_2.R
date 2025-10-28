@@ -91,10 +91,7 @@ formats <- bind_rows(formats, formats %>%
   filter(table == "rsa_med") %>% 
   mutate(table = "rsa_medatu"))
 
-arrow::write_parquet(formats %>% 
-                       mutate(longueur = as.integer(longueur),
-                              position = as.integer(position),
-                              fin = as.integer(position),
-                              curseur = as.integer(curseur)), 'formats/json/pmeasyr_formats.parquet')
-
+formats %>%
+    mutate(across(c(longueur, position, fin, curseur), as.integer)) %>%
+    arrow::write_parquet('formats/json/pmeasyr_formats.parquet')
 
