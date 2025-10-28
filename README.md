@@ -5,7 +5,7 @@ Formats des fichiers in out pour pmeasyr
 
 Ce projet contient les formats des fichiers PMSI pris en charge par *pmeasyr* en xlsx et le script R pour les intégrer à un .Rdata.
 
-Le répertoire contient les manuels ATIH des versions M12 des logiciels Genrsa, Genrha, Paprica, Pivoine, Preface.
+Le répertoire contient les manuels ATIH des versions M12 des logiciels Genrsa, Genrha, Paprica, Pivoine, Preface et Druides.
 
 ## formats pour pypmsi et pmsi_rust
 
@@ -38,7 +38,7 @@ Ouvrir le programme formats/progs/excelsi_2.R, le lancer.
 
 ### pour mars-décembre
 
-Si l'étape "janvier-février" est faite, il s'agit ici de tenir compte des nouveautés de l'ATIH de noueau à M03,
+Si l'étape "janvier-février" est faite, il s'agit ici de tenir compte des nouveautés de l'ATIH de nouveau à M03,
 de les intégrer dans les fichiers xlsx et ensuite de regénérer le .RData de nouveau.
 
 Ce processus est donc un mélange d'actions automatiques et de vérifications manuelles.
