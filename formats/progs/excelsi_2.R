@@ -95,3 +95,5 @@ formats %>%
     mutate(across(c(longueur, position, fin, curseur), as.integer)) %>%
     arrow::write_parquet('formats/json/pmeasyr_formats.parquet')
 
+
+
