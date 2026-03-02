@@ -2,7 +2,7 @@
 library(dplyr, warn.conflicts = FALSE)
 library(stringfix)
 
-annee = 2025
+annee = 2026
 
 liste_fichiers_courant <- tibble(
   path_fichier = list.files('formats/excel', recursive = TRUE, pattern = "xlsx", full.names = TRUE),
@@ -34,6 +34,9 @@ dir.create(stringr::str_glue('formats/excel/MCO/{annee}'))
 dir.create(stringr::str_glue('formats/excel/PSY/{annee}'))
 dir.create(stringr::str_glue('formats/excel/RSF/{annee}'))
 dir.create(stringr::str_glue('formats/excel/HAD/{annee}'))
+
+# lf_in <- lf_in %>% .[!grepl('MCO', .)]
+# lf_out <- lf_out %>% .[!grepl('MCO', .)]
 
 file.copy(from = lf_in, to = lf_out)
 
